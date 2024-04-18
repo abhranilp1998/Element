@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Page</title>
+    <!-- Include CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(rgb(139, 217, 229), #69a361, rgb(97, 215, 97), #b33aa1,rgb(139, 217, 229));
+            color: #930707;
+            min-height: 100vh;
+            display: flex;
+            align-items:flex-start; /* Align items to the top */  
+            justify-content: flex-start; /* Align items to the left */     
+         }
+
+        .container {
+            background-color: rgba(210, 175, 38, 0.5);
+            margin-top: 10%;
+            padding: 20px;
+            position: absolute;
+            top: 20px; 
+            left: 20px; 
+            border-radius: 10px;
+            scale: 0.9;
+        }
+
+        .iframe-container {
+            position: relative;
+            overflow: hidden;
+            padding-top: 56.25%; /* 16:9 aspect ratio */
+            border-radius: 10px;
+        }
+
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            transition: transform 0.3s ease;
+        }
+
+        .track-info {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+    </style>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="container col-4 "  onmouseover="enlargePlayer(this)" onmouseout="shrinkPlayer(this)">
+
+        <div class="iframe-container" >
+            <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/202962731&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+
+        <div class="track-info">
+            <a href="https://soundcloud.com/princefoxmusic" target="_blank" style="color: #ccc; text-decoration: none;">Prince Fox</a> ·
+            <a href="https://soundcloud.com/princefoxmusic/raindrops-feat-kerli-prince-fox-remix" target="_blank" style="color: #ccc; text-decoration: none;">SNBRN - Raindrops feat. Kerli (Prince Fox Remix)</a>
+        </div>
+
+    </div>
+
+    <div class="container col-4"  onmouseover="enlargePlayer(this)" onmouseout="shrinkPlayer(this)">
+
+        <div class="iframe-container" >
+            <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/218673529&color=%232f6a20&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+
+        <div class="track-info">
+            <a href="https://soundcloud.com/pls-ty-vip" target="_blank" style="color: #180b0b; text-decoration: none;">PLS&amp;TY VIP</a> ·
+            <a href="https://soundcloud.com/pls-ty-vip/dr-dre-kush-feat-snoop-dogg-akon-plsty-arman-cekin-remix" target="_blank" style="color: #103305; text-decoration: none;">Dr. Dre - Kush (feat. Snoop Dogg &amp; Akon)</a>
+        </div>
+
+    </div>
+
+    <div class="container col-4"  onmouseover="enlargePlayer(this)" onmouseout="shrinkPlayer(this)">
+
+        <div class="iframe-container" >
+            <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1069821154&color=%23945c4c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+
+        <div class="track-info">
+            <a href="https://soundcloud.com/blacklbeatz" target="_blank" style="color: #180b0b; text-decoration: none;" title="FREE RAP TRAP BEATS INSTRUMENTAL TYPE BEAT PHONK">RAP TRAP BEAT</a> ·
+            <a href="https://soundcloud.com/blacklbeatz/feels" title="&quot;FEELS&quot; ~ Chill Acoustic Pop Guitar LoFi Relax Hip Hop Instrumental" target="_blank" style="color: #103305; text-decoration: none;">ChillHop</a>
+        </div>
+
+    </div>
+
+
+    <!-- <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1069821154&color=%23945c4c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/blacklbeatz" title="FREE RAP TRAP BEATS INSTRUMENTAL TYPE BEAT PHONK" target="_blank" style="color: #cccccc; text-decoration: none;">FREE RAP TRAP BEATS INSTRUMENTAL TYPE BEAT PHONK</a> · <a href="https://soundcloud.com/blacklbeatz/feels" title="&quot;FEELS&quot; ~ Chill Acoustic Pop Guitar Type Beat ChillHop LoFi Relax Hip Hop Free Rap 2021 Instrumental" target="_blank" style="color: #cccccc; text-decoration: none;">&quot;FEELS&quot; ~ Chill Acoustic Pop Guitar Type Beat ChillHop LoFi Relax Hip Hop Free Rap 2021 Instrumental</a></div> -->
+
+    <h6 style="margin: top 90% ;">The volume functionality aint working</h6>
+
+    <!-- Include JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://w.soundcloud.com/player/api.js"></script>
+    
+    <script>
+        function enlargePlayer(element) {
+            element.style.transform = "scale(1.2)";
+            element.style.transition = "transform 0.3s ";
+        }
+
+        function shrinkPlayer(element) {
+            element.style.transform = "scale(1)";
+        }
+
+        // Function to create volume controls and append them to the document
+        function addVolumeControls() {
+            // Create volume container
+            var volumeContainer = document.createElement("div");
+            volumeContainer.classList.add("container");
+            volumeContainer.classList.add("col-3"); // Adjust the width as needed
+            volumeContainer.style.marginTop = "20px"; // Adjust margin as needed
+
+            // Create volume controls
+            var volumeControls = document.createElement("div");
+            volumeControls.innerHTML = `
+                <label for="volumeRange">Volume:</label>
+                <input type="range" id="volumeRange" min="0" max="100" value="50" onchange="changeVolume(this.value)">`;
+
+            // Append volume controls to volume container
+            volumeContainer.appendChild(volumeControls);
+
+            // Append volume container to the body
+            document.body.appendChild(volumeContainer);
+        }
+
+        // Call the function to add volume controls
+        addVolumeControls();
+
+        // Function to change the volume of the SoundCloud player
+        function changeVolume(volume) {
+            var iframes = document.querySelectorAll('iframe');
+            iframes.forEach(function(iframe) {
+                var player = SC.Widget(iframe);
+                player.setVolume(volume / 100);
+            });
+        }
+
+        
+    </script>
+</body>
+</html>
