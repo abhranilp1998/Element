@@ -25,13 +25,15 @@
             margin: 0 auto;
             padding: 20px;
             /* color: rgb(148, 200, 2); */
-            text-shadow: 2px 2px 4px rgba(0, 255, 0, 50);
+            text-shadow: 2px 2px 4px rgba(100, 255, 100, 0.5);
             font-weight: bold;
         }
         
         header {
             position: relative;
-            height: 30px;
+            /* height: 300px; */
+            /* Adjust as needed */
+            /* overflow: hidden; */
         }
         
         .header-image {
@@ -40,13 +42,16 @@
             left: 0;
             width: 100%;
             height: 100%;
-            /* background-image: url('landscape.jpg'); */
+            background-image: url("images/img6.jpg"); /* Corrected background image URL */
             background-size: cover;
             opacity: 70%;
         }
+
+        /* .carousel slide{         
+        } */
         
         .carousel {
-            height: 600px;
+            height: 500px;
             /* Adjust as needed */
             overflow: hidden;
         }
@@ -63,7 +68,7 @@
                 height: 200px;
             }
             .carousel {
-                height: auto;
+                height: 300px;
                 /* Adjust as needed */
             }
         }
@@ -81,16 +86,25 @@
         }
         
         #opening-text h1 {
+            z-index: "999";
             font-size: 2.5em;
             /* Increase font size */
             margin-bottom: 20px;
             /* Add some space at the bottom */
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
             /* Add shadow for better visibility */
+            color: rgb(0, 0, 0);
+            font-weight: 400;
+            background-color: rgba(83, 76, 76, 0.404);
+            border-radius: 20px;
+            /* Add background color */
+            padding: 10px;
+            /* Add padding */
+            max-width: fit-content;
         }
         
         #opening-text p {
-            font-size: 1.2em;
+            font-size: 20px;
             /* Increase font size */
             margin-bottom: 30px;
             /* Add some space at the bottom */
@@ -103,12 +117,12 @@
     <header>
         <!-- Header image -->
         <div class="header-image">
-            <img src="images\img6.jpg" class="d-block w-100">
+            <!-- <img src="images\img6.jpg" class="d-block w-100"> -->
         </div>
     </header>
 
     <div class="container" id="opening-text">
-        <h1>Welcome to Our Website</h1>
+        <h1 class="bg-black text-bg-primary bg-black  font-weight-bold font ">Welcome to ICARUS Verse</h1>
         <p>This is some introductory text about our website. Feel free to browse through the content below.</p>
 
         <!-- <br><br><br><br><br><br><br><br> -->
@@ -145,14 +159,24 @@
         <p>This is some information about our organization.</p>
 
 
+        <div class="row justify-content-center">
+            <div class>
+                <a class="btn btn-primary mt-5"  href="musixxx.html">music</a>
+            </div>
 
-        <div class>
-            <a class="btn btn-primary mt-5"  href="musixxx.html">music</a>
-            <a class="btn btn-danger mt-5"  href="bigbrain.html">needs working</a>
+            <div >
+                <a class="btn btn-danger mt-5"  href="bigbrain.html">needs working</a>
+
+                <a class="btn btn-primary mt-5"  href="contact.html">Contact</a>
+
+            </div>
         </div>
+        
 
         <footer>
-            <h2>Contact Us</h2>
+            <h2>
+                <a href="contact.html"btn btn-primary mt-5 ></a>
+            </h2>
             <p>You can reach us at:</p>
             <ul>
                 <li>Email: example@example.com</li>
