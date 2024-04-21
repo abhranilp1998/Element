@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Music Player</title>
+    <style>
+        /* Add your custom styles for the music player here */
+        /* For example: */
+        body {
+            background: linear-gradient( red, orange, yellow, green);
+            font-family: Arial, sans-serif;
+        }
+        
+        .player-container {
+            width: 60%;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .song-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .song-list li {
+            margin-bottom: 10px;
+        }
+        
+        .song-title {
+            font-weight: bold;
+        }
+        
+        .song-artist {
+            color: #888;
+        }
+
+        .container {
+            width: 100%;
+        }    
+        .navbar {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+        }
+
+        .navbar button {
+            background: none;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .navbar input[type="range"] {
+            background: #fff;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <button onclick="document.getElementById('player').play()">Under Construction, Play</button>
+        <button onclick="document.getElementById('player').pause()">Pause</button>
+        <input type="range" min="0" max="1" step="0.01" onchange="document.getElementById('player').volume = this.value">
+    </div>
+    <div class="player-container">
+        <h1>Music Player</h1>
+        <ul class="song-list">
+            <li>
+                <div class="song-title">Song 1</div>
+                <div class="song-artist">Artist 1</div>
+                <div class="container col-3" onmouseover="enlargePlayer(this)" onmouseout="shrinkPlayer(this)">
+                    <!-- SoundCloud embedded player for Song 1 -->
+                    <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1804249125&color=%23745c62&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                </div>
+            </li>
+            <li>
+                <div class="song-title">Song 2</div>
+                <div class="song-artist">Artist 2</div>
+                <div class="container col-3" onmouseover="enlargePlayer(this)" onmouseout="shrinkPlayer(this)">
+                    <!-- SoundCloud embedded player for Song 2 -->
+                    <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1804414713&color=%23a30813&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                </div>
+            </li>
+            <li>
+                <div class="song-title">Song 3</div>
+                <div class="song-artist">Artist 3</div>
+                <div class="container col-3" onmouseover="enlargePlayer(this)" onmouseout="shrinkPlayer(this)">
+                    <!-- SoundCloud embedded player for Song 3 -->
+                    <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1804241277&color=%23252727&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                </div>
+            </li>
+            <!-- Add more songs with embedded players as needed -->
+        </ul>
+    </div>
+    <script>
+        // Initialize volume to a default value
+        document.getElementById('player').volume = 0.5;      
+        
+            function setVolume(value) {
+                document.getElementById('player').volume = value;
+            }
+            
+
+    </script>
+</body>
+</html>
