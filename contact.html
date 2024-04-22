@@ -25,6 +25,8 @@
             color: rgb(18, 19, 2);
         }
 
+
+
 #submit{
     margin: 0 auto;
 
@@ -86,6 +88,11 @@
     document.getElementById('info').innerHTML="Not Now!!" ;
     document.getElementById('info').style.color = "red"; // Change the color to red
     document.getElementById('submit').classList="form-control btn btn-danger";
+    // curser disasbled on hover
+    document.getElementById('submit').addEventListener('mouseover', function(event) {
+        event.preventDefault();
+        document.getElementById('submit').style.cursor = "not-allowed";
+    });
 
 });
 
