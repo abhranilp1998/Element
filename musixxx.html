@@ -187,6 +187,13 @@
     
         // Function to change the volume of the SoundCloud player
         function changeVolume(volume) {
+            //if volume is 0, change the text of the mute button to "Unmute"
+            document.getElementById("muteButton").innerText = volume == 0 ? "Unmute" : "Mute";
+            
+            //if volume is not 0, change text to "mute"
+            document.getElementById("muteButton").innerText = volume !== 0 ? "Mute" : "Unmute";
+
+            // Loop through all iframes on the page
             var iframes = document.querySelectorAll('iframe');
             iframes.forEach(function(iframe) {
                 var player = SC.Widget(iframe);

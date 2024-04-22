@@ -2,17 +2,18 @@
 <html>
 <head>
     <title>Music Player</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
     <style>
-        /* Add your custom styles for the music player here */
-        /* For example: */
-        body {
-            background: linear-gradient( red, orange, yellow, green);
+        /* Add  custom styles for the music player here */
+       body {
+            background: linear-gradient(to bottom , red, orange, yellow, green , rgb(255, 162, 0), rgb(0, 255, 166), red);
             font-family: Arial, sans-serif;
         }
         
         .player-container {
-            width: 60%;
-            margin: 0 auto;
+            width: 80%;
+            margin: 10px auto;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -59,30 +60,73 @@
         .navbar input[type="range"] {
             background: #fff;
         }
+
+        /* Add CSS styling for volume controls */
+        .volume-container {
+            position: fixed;
+            right: 20px;
+            top: 20px;
+            z-index: 9999;
+            background-color: rgba(253, 216, 2, 0.641);
+            border-radius: 10px;
+            padding: 3px;
+            /* scale: 0.5; */
+        }
+
+        .volume-container:hover {
+        transform: scale(1);
+        transition: transform 0.2s; /* Specify the transition for the transform property */
+        }
+
+
+        .volume-container input[type="range"] {
+            width: 50%; /* Adjust width as needed */
+            
+            
+        }
+
+        #volumeRange{
+            width: 100%; 
+            height: 100%;
+            
+        }
+
+        #muteButton{
+            /* background-color: rgb(24, 73, 170); */
+            /* center the button */
+            
+            display: flex;
+            justify-content: center;
+            /* align-items: center;  */
+            width: 100%;
+            
+            
+            
+        }
         
     </style>
 </head>
 <body>
-    <div class="navbar">
+    <!-- <div class="navbar">
         <button onclick="document.getElementById('player').play()">Under Construction, Play</button>
         <button onclick="document.getElementById('player').pause()">Pause</button>
         <input type="range" min="0" max="1" step="0.01" onchange="document.getElementById('player').volume = this.value">
-    </div>
+    </div> -->
     <div class="player-container">
         <h1>Music Player</h1>
         <ul class="song-list">
             <li>
                 <div class="song-title">Song 1</div>
                 <div class="song-artist">Artist 1</div>
-                <div class="container col-3" onmouseover="enlargePlayer(this)" onmouseout="shrinkPlayer(this)">
+                <div class="container" onmouseover="enlargePlayer(this)" onmouseout="shrinkPlayer(this)">
                     <!-- SoundCloud embedded player for Song 1 -->
-                    <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1804249125&color=%23745c62&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                    <iframe width="100%" height="300" scrolling="no" frameborder="yes" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1804249125&color=%23745c62&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
                 </div>
             </li>
             <li>
                 <div class="song-title">Song 2</div>
                 <div class="song-artist">Artist 2</div>
-                <div class="container col-3" onmouseover="enlargePlayer(this)" onmouseout="shrinkPlayer(this)">
+                <div class="container" onmouseover="enlargePlayer(this)" onmouseout="shrinkPlayer(this)">
                     <!-- SoundCloud embedded player for Song 2 -->
                     <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1804414713&color=%23a30813&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
                 </div>
@@ -90,7 +134,7 @@
             <li>
                 <div class="song-title">Song 3</div>
                 <div class="song-artist">Artist 3</div>
-                <div class="container col-3" onmouseover="enlargePlayer(this)" onmouseout="shrinkPlayer(this)">
+                <div class="container" onmouseover="enlargePlayer(this)" onmouseout="shrinkPlayer(this)">
                     <!-- SoundCloud embedded player for Song 3 -->
                     <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1804241277&color=%23252727&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
                 </div>
@@ -98,14 +142,98 @@
             <!-- Add more songs with embedded players as needed -->
         </ul>
     </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://w.soundcloud.com/player/api.js"></script>
     <script>
-        // Initialize volume to a default value
-        document.getElementById('player').volume = 0.5;      
-        
-            function setVolume(value) {
-                document.getElementById('player').volume = value;
-            }
+
+        function enlargePlayer(element) {
+            element.style.transform = "scale(1.2)";
+            element.style.transition = "transform 0.2s ";
+        }
+    
+        function shrinkPlayer(element) {
+            element.style.transform = "scale(1)";
+        }
+
+        // Function to create volume controls and append them to the document
+        function addVolumeControls() {
+            // Create volume container
+            var volumeContainer = document.createElement("div");
+            volumeContainer.classList.add("volume-container");
+            // volumeContainer.style.position = "fixed"; // Set position to fixed
+            // // volumeContainer.style.marginTop = "10px"; // Adjust top position
+            // volumeContainer.style.right = "20px"; // Adjust right position
+            // volumeContainer.style.zIndex = "9999"; // a high z-index to make sure it's above other contents
+            // volumeContainer.style.backgroundColor = "rgba(255, 100, 100, 0.7)"; // Optional: Add a background color with transparency
+            // volumeContainer.style.borderRadius = "10px"; // Optional: Add a border radius
+            // volumeContainer.style.padding = "10px"; // Optional: Add padding
+    
+            // Create volume range input
+            var volumeRange = document.createElement("input");
+            volumeRange.type = "range";
+            volumeRange.id = "volumeRange";
+            volumeRange.min = "0";
+            volumeRange.max = "100";
+            volumeRange.value = "50";
+            volumeRange.step="10;"
+            // volumeContainer.style.position = "fixed"; // Set position to fixed
+
+            volumeRange.style.top="5px";
+            volumeRange.oninput = function() {
+                changeVolume(this.value);
+            };
+
+            //create mute button
+            var muteButton = document.createElement("button");
+            muteButton.id = "muteButton";
+            muteButton.classList="btn btn-primary btn-sm "
+            // muteButton.style.scale="1"
             
+            //create mute button text
+            muteButton.innerText = "Mute";
+            muteButton.onclick = function() {
+                changeVolume(0);
+            };      
+         
+    
+            // Create volume label
+            var volumeLabel = document.createElement("label");
+            volumeLabel.htmlFor = "volumeRange";
+            // volumeLabel.innerText = "Volume:";
+    
+            // Append volume controls to volume container
+            volumeContainer.appendChild(volumeLabel);
+            volumeContainer.appendChild(volumeRange);
+            volumeContainer.appendChild(muteButton);   
+    
+            // Append volume container to the body
+            document.body.appendChild(volumeContainer);
+        }
+    
+        // Call the function to add volume controls
+            document.addEventListener("DOMContentLoaded", function() {
+            addVolumeControls();    
+            });
+        //or in a simpler way
+        // Call the function to add volume controls
+        // addVolumeControls();
+
+        // Function to change the volume of the SoundCloud player
+        function changeVolume(volume) {
+            //if volume is 0, change the text of the mute button to "Unmute"
+            document.getElementById("muteButton").innerText = volume == 0 ? "Unmute" : "Mute";
+            
+            //if volume is not 0, change text to "mute"
+            document.getElementById("muteButton").innerText = volume !== 0 ? "Mute" : "Unmute";
+
+            // Loop through all iframes on the page
+            var iframes = document.querySelectorAll('iframe');
+            iframes.forEach(function(iframe) {
+                var player = SC.Widget(iframe);
+                player.setVolume(volume);
+            });
+        }
 
     </script>
 </body>
