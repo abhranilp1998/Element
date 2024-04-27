@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICARUS</title>
+    <style>
+body{
+    margin: 0px;
+    background: linear-gradient(to left, red, blue,gold);
+}
+
+
+
+header img{
+    display: block;
+    width: 100%;/*not min- here*/
+    max-height: 300px;
+    margin-inline:auto ;
+    object-fit:cover;
+    z-index: -1;
+    opacity: 80%;
+    
+}
+
+#heading-text{
+    /* position:absolute; */
+    /* top: 3px; */
+    text-align: center;
+    font-size: 50px;
+    color: rgb(0, 0, 0);
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.navbar{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: hsla(240, 1%, 17%, 0.808);
+    border-radius: 12px 12px 0 0;
+    backdrop-filter: blur(20px);
+    border: 1px solid;
+    /* box-shadow: antiquewhite; */
+    z-index: 5;
+}
+
+.navbar-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px;
+    list-style-type: none;
+
+}
+
+
+.navbar-button {
+  background-color: rgb(33, 10, 10);
+  font-size: var(--fs-8);
+  padding: 20px 20px;
+  /* color: lightgray; */
+  transition: color var(--transition-1);
+  border-style:groove;
+  &:hover {
+    background-color: var(--clr-primary-1);
+  }
+  border-radius: 10px;
+  /* align-content: flex-start */
+  /* align-items: flex-start; */
+  /* justify-content: flex-start; */
+  /* flex-direction: column; */
+}
+
+.navbar-item-link{
+    margin: 0 10px;
+}
+
+.navbar-link{
+    text-decoration: none;
+    color: antiquewhite;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <img id="heading-img"src="/images/img6.jpg">
+        <h1 id="heading-text">Yo This is Element</h1>
+    </header>
+
+
+
+
+    <nav class="navbar">
+        <ul class="navbar-list">
+
+            <li class="navbar-item-link">
+                <button class="navbar-button" >
+                    <a class="navbar-link" href="/musixxx.html">Player</a>
+                </button>
+            </li>
+
+            <li class="navbar-item-link">
+                <button class="navbar-button">
+                    <a class="navbar-link" href="/contact.html">Contact</a>
+                </button>
+            </li>
+
+            <li class="navbar-item-link">
+                <button class="navbar-button">
+                    <a class="navbar-link" href="/musixxx.html">Pages</a>
+                </button>
+            </li>
+
+        </ul>
+
+    </nav>
+
+    <footer>
+        
+    </footer>
+</body>
+</html>
