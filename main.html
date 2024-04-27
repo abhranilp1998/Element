@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ICARUS</title>
     <style>
+
+:root {
+  --transition-1: 0.3s ease; /* Sets the duration to 0.3 seconds and the timing function to 'ease' */
+}
+
 body{
     margin: 0px;
     background: linear-gradient(to left, red, blue,gold);
@@ -62,11 +67,11 @@ header img{
   padding: 20px 20px;
   /* color: lightgray; */
   transition: color var(--transition-1);
-  border-style:groove;
+  border-style:none;
   &:hover {
-    background-color: var(--clr-primary-1);
+    background-color: rgb(48, 36, 6);
   }
-  border-radius: 10px;
+  border-radius: 15px;
   /* align-content: flex-start */
   /* align-items: flex-start; */
   /* justify-content: flex-start; */
@@ -97,22 +102,31 @@ header img{
         <ul class="navbar-list">
 
             <li class="navbar-item-link">
-                <button class="navbar-button" >
-                    <a class="navbar-link" href="/musixxx.html">Player</a>
+                <button title="Have a few listens"class="navbar-button" >
+                    <a class="navbar-link" href="/musixxx.html" target="_blank" >Player</a>
+                </button>
+            </li>
+
+            
+
+            <li class="navbar-item-link">
+                <button title="Follow me" class="navbar-button">
+                    <a class="navbar-link" href="/musixxx.html">Socials</a>
                 </button>
             </li>
 
             <li class="navbar-item-link">
-                <button class="navbar-button">
-                    <a class="navbar-link" href="/contact.html">Contact</a>
+                <button title="AAll my links" class="navbar-button">
+                    <a class="navbar-link" href="/musixxx.html">Links</a>
                 </button>
             </li>
 
             <li class="navbar-item-link">
-                <button class="navbar-button">
-                    <a class="navbar-link" href="/musixxx.html">Pages</a>
+                <button title="Link up" class="navbar-button">
+                    <a class="navbar-link" href="/contact.html" target="_blank">Contact</a>
                 </button>
             </li>
+
 
         </ul>
 
