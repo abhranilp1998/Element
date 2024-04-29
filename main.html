@@ -1,140 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ICARUS</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.3.0/uicons-brands/css/uicons-brands.css"
+    />
     <style>
+      /* <!-- favicon css !--> */
+      @import url("https://cdn-uicons.flaticon.com/2.3.0/uicons-brands/css/uicons-brands.css");
 
-:root {
-  --transition-1: 0.3s ease; /* Sets the duration to 0.3 seconds and the timing function to 'ease' */
-}
+      :root {
+        --transition-1: 0.3s ease; /* Sets the duration to 0.3 seconds and the timing function to 'ease' */
+      }
 
-body{
-    margin: 0px;
-    background: linear-gradient(to left, red, blue,gold);
-}
+      body {
+        margin: 0px;
+        background: linear-gradient(to right, black 20%, rgb(20, 6, 6), brown);
+        padding: 0px 0px 150px 0px;
+      }
+
+      header img {
+        display: block;
+        width: 100%; /*not min- here*/
+        max-height: 300px;
+        margin-inline: auto;
+        object-fit: cover;
+        z-index: -1;
+        opacity: 80%;
+      }
+
+      #heading-text {
+        /* position:absolute; */
+        /* top: 3px; */
+        text-align: center;
+        font-size: 50px;
+        color: rgb(0, 0, 0);
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .navbar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        min-width: 90%;
+        max-height: 130px;
+        background: hsla(240, 1%, 17%, 0.457);
+        border-radius: 12px; /*12px 0 0;*/
+        backdrop-filter: blur(20px);
+        border: 1px solid;
+        /* box-shadow: antiquewhite; */
+        margin: 10px auto;
+        z-index: 5;
+        /* max-height: 140px; */
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .navbar-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 10px;
+        list-style-type: none;
+      }
+
+      .navbar-button {
+        background-color: rgb(53, 5, 5);
+        font-size: var(--fs-8);
+        padding: 20px 20px;
+        /* color: lightgray; */
+        transition: color var(--transition-1);
+        border-style: none;
+        &:hover {
+          background-color: rgb(48, 36, 6);
+        }
+        border-radius: 15px;
+        /* align-content: flex-start */
+        /* align-items: flex-start; */
+        /* justify-content: flex-start; */
+        /* flex-direction: column; */
+      }
+
+      .navbar-item-link {
+        margin: 10px 10px;
+      }
+
+      .navbar-link {
+        text-decoration: none;
+        color: antiquewhite;
+      }
+
+      /*  */
+      /* navbar ends */
+      /*  */
+
+      #heading-text {
+        background-image: linear-gradient(
+          to right,
+          rgba(255, 0, 0, 0.786) 10%,
+          rgba(0, 0, 255, 0.85)
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        max-width: max-content;
+        border: solid 4px;
+        /* text-align: center; */
+        border-radius: 15px;
+        display: block;
+        margin: 10px auto;
+        padding: 10px;
+        /* border-style : solid; */
+        border-color: rgb(9, 39, 80);
+      }
+
+      h1 {
+        margin: 20px 20px 20px 20px;
+        padding: 20px;
+      }
+
+      #heading-next {
+        text-align: center;
+        font-family: cursive;
+        font-size: 40px;
+        font-style: italic;
+        background-image: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0.95),
+          rgb(177, 180, 0)
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      #insta {
+        display: flex;
+        justify-content: center; /* Centering horizontally */
+        align-items: center; /* Centering vertically */
+        margin-top: 20px; /* Adjust as needed */
+      }
+
+      #insta :hover {
+        z-index: 1;
+        scale: 1.2;
+        transition: 0.2s ease;
+        color: rgb(144, 109, 190);
+        cursor: grab;
+      }
+
+      p {
+        color: rgb(144, 109, 190);
+        justify-content: center;
+        font-size: 150%;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        margin: 60px 20px 10px 20px;
+        text-align: center;
+
+        /* left: 50px; */
+        padding: 0px 20px;
+      }
+
+      a {
+        font-size: 20px;
+        text-decoration: none;
+      }
+
+      #link-to-soundcloud pre {
+        color: burlywood;
+        text-align: center;
+        font-size: 26px;
+        /* font-family:Helvetica; */
+      }
+
+      #link-to-soundcloud pre i{
+        color: aqua;
+        font-size: 40px;
+        /* margin-top: 10000px !important; */
+        text-align: center;
+      }
 
 
+      #logo-icarus-container{
+        text-align: center;
+        /* justify-content: */
+      }
 
-header img{
-    display: block;
-    width: 100%;/*not min- here*/
-    max-height: 300px;
-    margin-inline:auto ;
-    object-fit:cover;
-    z-index: -1;
-    opacity: 80%;
-    
-}
+      #logo-icarus-container button{
+        padding: 20px;
+        width:auto;
+        font-size: 20px;
+        color: rgb(24, 16, 5);
+        border-radius: 5% 25%;
+        background: linear-gradient(brown,gold);
+      }
 
-#heading-text{
-    /* position:absolute; */
-    /* top: 3px; */
-    text-align: center;
-    font-size: 50px;
-    color: rgb(0, 0, 0);
-    font-family:Arial, Helvetica, sans-serif;
-}
-
-.navbar{
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: hsla(240, 1%, 17%, 0.808);
-    border-radius: 12px 12px 0 0;
-    backdrop-filter: blur(20px);
-    border: 1px solid;
-    /* box-shadow: antiquewhite; */
-    z-index: 5;
-}
-
-.navbar-list{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 10px;
-    list-style-type: none;
-
-}
-
-
-.navbar-button {
-  background-color: rgb(33, 10, 10);
-  font-size: var(--fs-8);
-  padding: 20px 20px;
-  /* color: lightgray; */
-  transition: color var(--transition-1);
-  border-style:none;
-  &:hover {
-    background-color: rgb(48, 36, 6);
-  }
-  border-radius: 15px;
-  /* align-content: flex-start */
-  /* align-items: flex-start; */
-  /* justify-content: flex-start; */
-  /* flex-direction: column; */
-}
-
-.navbar-item-link{
-    margin: 0 10px;
-}
-
-.navbar-link{
-    text-decoration: none;
-    color: antiquewhite;
-}
+      #logo-icarus-container button:hover{
+        transition: 300ms;
+        color: rgb(240, 218, 188);
+        background: linear-gradient(gold,brown);
+        cursor: alias;
+      }
 
     </style>
-</head>
-<body>
+  </head>
+
+  <body>
     <header>
-        <img id="heading-img"src="assets\images\img6.jpg">
-        <h1 id="heading-text">Yo This is Element</h1>
+      <img id="heading-img" src="assets\images\img6.jpg" />
+      <h1 id="heading-text">Not your homie but yo` homeboy</h1>
+      <h3 id="heading-next">ICARUS</h3>
     </header>
 
+    <a
+      id="insta"
+      href="https://www.instagram.com/markthename_icarus?utm_source=qr&igsh=MThmZm5pMXk3b2hvNQ=="
+      target="_blank"><img src="assets/images/insta.png" alt="instagram">
+    </a>
+
+    <p>
+      Icarus One, the renowned boom bap rapper from Kolkata, who has now
+      ventured into the world of trap music! Prepare to be blown away by Icarus
+      One's unique blend of boom bap and trap, as he takes the stage on an
+      unforgettable musical journey. Get ready to experience his electrifying
+      beats, clever wordplay, and captivating stage presence. where Icarus One
+      will showcase his incredible talent and push the boundaries of trap music.
+      Don't miss out on this one-of-a-kind performance that will leave you
+      craving for more with mind-blowing music, energetic vibes, and an
+      unforgettable experience.
+    </p>
 
 
+
+    <div  id="logo-icarus-container" style="overflow: hidden;">
+        <!-- <div class="container-fluid " id="button" > -->
+            <button  id="icarus-logo" onclick="icarusshow(event)">ART</button>
+        <!-- </div> -->
+    </div>
+    
+
+
+
+
+    <p>********************************</p>
+
+    <a
+      id="link-to-soundcloud"
+      href="https://on.soundcloud.com/tba6n"
+      target="_blank"><pre>Check out ICARUS on #SoundCloud 
+<i class="fi fi-brands-soundcloud"></i></pre>
+    </a>
+
+
+
+
+
+
+
+    <!-- *************************************************** -->
+
+    <!-- Naavbar -->
 
     <nav class="navbar">
-        <ul class="navbar-list">
+      <ul class="navbar-list">
+        <li class="navbar-item-link">
+          <button title="Have a few listens" class="navbar-button">
+            <a class="navbar-link" href="/musixxx.html" target="_blank"
+              >Player</a
+            >
+          </button>
+        </li>
 
-            <li class="navbar-item-link">
-                <button title="Have a few listens"class="navbar-button" >
-                    <a class="navbar-link" href="/musixxx.html" target="_blank" >Player</a>
-                </button>
-            </li>
+        <li class="navbar-item-link">
+          <button title="Follow me" class="navbar-button">
+            <a class="navbar-link" href="/musixxx.html">Socials</a>
+          </button>
+        </li>
 
-            
+        <li class="navbar-item-link">
+          <button title="AAll my links" class="navbar-button">
+            <a class="navbar-link" href="/musixxx.html">Links</a>
+          </button>
+        </li>
 
-            <li class="navbar-item-link">
-                <button title="Follow me" class="navbar-button">
-                    <a class="navbar-link" href="/musixxx.html">Socials</a>
-                </button>
-            </li>
-
-            <li class="navbar-item-link">
-                <button title="AAll my links" class="navbar-button">
-                    <a class="navbar-link" href="/musixxx.html">Links</a>
-                </button>
-            </li>
-
-            <li class="navbar-item-link">
-                <button title="Link up" class="navbar-button">
-                    <a class="navbar-link" href="/contact.html" target="_blank">Contact</a>
-                </button>
-            </li>
-
-
-        </ul>
-
+        <li class="navbar-item-link">
+          <button title="Link up" class="navbar-button">
+            <a class="navbar-link" href="/contact.html" target="_blank"
+              >Contact</a
+            >
+          </button>
+        </li>
+      </ul>
     </nav>
 
     <!-- <footer>
         
     </footer> -->
-    
-</body>
+
+    <script src="assets/js/script.js"></script>
+  </body>
 </html>
