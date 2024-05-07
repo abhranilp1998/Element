@@ -48,3 +48,11 @@ function icarusshow(event) {
 
     })
 }
+
+function goToTop(event){
+    event.preventDefault;
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
