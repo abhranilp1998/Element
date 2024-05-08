@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Page</title>
+    <!-- Include CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(rgb(139, 217, 229), #69a361, rgb(97, 215, 97), #b33aa1,rgb(139, 217, 229));
+            color: #930707;
+            min-height: 100vh;
+            display: flex;
+            align-items:flex-start; /* Align items to the top */  
+            justify-content: flex-start; /* Align items to the left */     
+         }
+
+        .container {
+            background-color: rgba(210, 175, 38, 0.5);
+            margin-top: 10%;
+            padding: 20px;
+            position: absolute;
+            top: 20px; 
+            left: 20px; 
+            border-radius: 10px;
+        }
+
+        .iframe-container {
+            position: relative;
+            overflow: hidden;
+            padding-top: 56.25%; /* 16:9 aspect ratio */
+            border-radius: 10px;
+        }
+
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            transition: transform 0.3s ease;
+        }
+
+        .track-info {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+    </style>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="container col-3 "  onmouseover="enlargePlayer(this)" onmouseout="shrinkPlayer(this)">
+
+        <div class="iframe-container" >
+            <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/202962731&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+
+        <div class="track-info">
+            <a href="https://soundcloud.com/princefoxmusic" target="_blank" style="color: #ccc; text-decoration: none;">Prince Fox</a> ·
+            <a href="https://soundcloud.com/princefoxmusic/raindrops-feat-kerli-prince-fox-remix" target="_blank" style="color: #ccc; text-decoration: none;">SNBRN - Raindrops feat. Kerli (Prince Fox Remix)</a>
+        </div>
+
+    </div>
+
+
+        <!-- <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/218673529&color=%232f6a20&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+        
+        <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/pls-ty-vip" title="PLS&amp;TY VIP" target="_blank" style="color: #cccccc; text-decoration: none;">PLS&amp;TY VIP</a> · <a href="https://soundcloud.com/pls-ty-vip/dr-dre-kush-feat-snoop-dogg-akon-plsty-arman-cekin-remix" title="Dr. Dre - Kush (feat. Snoop Dogg &amp; Akon) (PLS&amp;TY &amp; Arman Cekin Remix) [Re-upload]" target="_blank" style="color: #cccccc; text-decoration: none;">Dr. Dre - Kush (feat. Snoop Dogg &amp; Akon) (PLS&amp;TY &amp; Arman Cekin Remix) [Re-upload]</a></div> -->
+
+
+    <div class="container col-3"  onmouseover="enlargePlayer(this)" onmouseout="shrinkPlayer(this)">
+
+        <div class="iframe-container" >
+            <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/218673529&color=%232f6a20&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+
+        <div class="track-info">
+            <a href="https://soundcloud.com/pls-ty-vip" target="_blank" style="color: #180b0b; text-decoration: none;">PLS&amp;TY VIP</a> ·
+            <a href="https://soundcloud.com/pls-ty-vip/dr-dre-kush-feat-snoop-dogg-akon-plsty-arman-cekin-remix" target="_blank" style="color: #103305; text-decoration: none;">Dr. Dre - Kush (feat. Snoop Dogg &amp; Akon)</a>
+        </div>
+
+    </div>
+
+    <!-- Include JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+        
+    </script>
+    
+    <script>
+        function enlargePlayer(element) {
+            element.style.transform = "scale(2)";
+            element.style.transition = "transform 0.3s ";
+            // element.style.transition = "transform 0.3s linear"; // Linear timing function
+            // element.style.transition = "transform 0.3s ease-in"; // Ease-in timing function
+            // element.style.transition = "transform 0.3s ease-out"; // Ease-out timing function
+            // element.style.transition = "transform 0.3s ease-in-out"; // Ease-in-out timing function
+
+        }
+
+        function shrinkPlayer(element) {
+            element.style.transform = "scale(1)";
+        }
+    </script>
+</body>
+</html>
