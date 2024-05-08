@@ -1,0 +1,183 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', 'sans-serif';
+}
+
+body{
+    z-index: -10;
+    overflow-x: hidden;
+    background: #522552;
+    color: antiquewhite;
+}
+
+.header{
+    position :fixed;
+    width: 100%;
+    top: 0;
+    left:0;
+    padding: 20px 10%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 25px;
+    color:#ededed;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navbar a{
+    font-size: 18px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 25px;
+    transition:.3s;
+}
+
+.navbar a:hover, .navbar a.active{
+    color: violet;
+}
+
+
+.home{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    padding: 0 10%;;
+}
+.home-content{
+    /* background: yellowgreen; */
+    max-width: 600px;
+}
+
+.home-content h1{
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.home-content h3{
+    font-size: 32px;
+    font-weight: 500;
+    color: #e44fe4;
+}
+
+.home-content p{
+    font-size: 20px;
+    margin: 20px 0px 40px;
+    padding-top: 20px;
+    
+    
+}
+
+.home-content .btn-box{
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+    /* background: brown; */
+}
+
+.btn-box a{
+    position: relative;
+    display: inline-flex;
+    width: 150px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: violet;
+    border: 2px solid violet;
+    border-radius: 8px;
+    font-size: 19px;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;;
+    z-index: 1;
+    transition: .5s;
+    overflow: hidden;
+}
+
+.btn-box a:nth-child(odd) {
+    background: transparent;
+    color: #e44fe4;
+}
+
+.btn-box a:nth-child(odd):hover {
+    background: rgb(58, 9, 48);
+}
+
+.btn-box a:nth-child(odd)::before {
+    background: violet;
+    color: black;
+}
+
+.btn-box a:nth-child(even) {
+    background: violet;
+    color: black;
+}
+
+.btn-box a:nth-child(even):hover {
+    background: transparent;
+    color: #e44fe4;
+}
+
+.btn-box a:nth-child(even)::before {
+    background: transparent;
+    color: #e44fe4;
+}
+
+
+.btn-box a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    /* z-index: -1; */
+    background: violet;
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box a:hover::before{
+    width: 100%;
+    /* color: violet; */
+}
+
+
+
+
+/* at 11:30 */
+
+
+
+.image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.image-content{
+    /* z-index: ; */
+    position: fixed;
+    /* background-color: aqua; */
+    top: 0;
+    right: -170px;
+    transition: 1s;
+    scale: .6;
+    opacity: 0.5;
+}
+
+.image-content:hover{
+    scale: .7;
+    opacity: 1;
+}

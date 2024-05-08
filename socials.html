@@ -6,15 +6,28 @@
     <title>Socials</title>
     <style>
         body{
-            margin:0px;
+            margin:0;
+            background: burlywood;
+            
         }
         .navbar{
             margin-top: 4px;
-            background-color: hsl(0, 78%, 33%);
+            background-color: rgba(13, 1, 1, 0.255);
+            /*  */
+            /* box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75); */
+            box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.922);
             position: fixed;
             width: 100%;
             /* margin: 2px ; */
             border-radius: 15px;
+            z-index: 99;
+            position: fixed;
+            width: 100%;
+            /* margin: 2px ; */
+            border-radius: 15px;
+            z-index: 99;
+            /* filter: blur(5px); */
+            backdrop-filter:blur(5px) ;
 
 
         }
@@ -46,8 +59,51 @@
 
         .navbar-link{
             text-decoration: none;
-            color: blanchedalmond;
+            color: hsl(57, 76%, 68%);
         }
+
+        #image{
+          padding-top: 20px;
+        }
+
+        #ttown-pic{
+          opacity: 80%;
+          position: fixed;
+        /* margin: 0 auto; */
+        width: 100%;
+        /* max-width: 1000px; */
+        height: 100vh;
+        /* left: 20px; */
+        object-fit:cover;
+        z-index: -99;
+
+      }
+
+      #opening-text{
+        background: linear-gradient(to left, red, blue);
+        opacity:1%;
+      }
+
+      p{
+        
+        backdrop-filter:blur(2px) ;
+        margin: 100px 10px;
+        text-align: center;
+        font-family: monospace;
+        font-size: 50px;
+        color: rgb(175, 46, 46);
+        border-radius: 5%;
+        /* border:  10px solid hsl(57, 36%, 41%); */
+      }
+      .container{
+        padding-top: 50px;
+        /* background: linear-gradient(to left, red, blue); */
+        /* backdrop-filter: blur(2px); */
+        border: 1px solid red;
+        border-radius: 10%;
+        margin: 10px;
+      }
+
     </style>
 </head>
 <body>
@@ -85,8 +141,20 @@
           </li>
         </ul>
       </nav>
-
+    
       <!-- navigation ends -->
+
+      <div id="image" class="background">
+        <img src="assets\images\header.jpg" alt="background-image" id="ttown-pic"
+      </div>
+
+      <div id="text-container" class="container">
+        <div id="opening-text">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ratione corrupti velit reiciendis molestiae praesentium eum veritatis dolorem exercitationem. Dolores dolore neque ex sint esse pariatur, possimus commodi similique consequuntur.</p>
+        </div>
+      </div>
+
+      
 
 </body>
 </html>
