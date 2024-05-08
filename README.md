@@ -5,7 +5,7 @@ Remember the name.
 main is index.html.
 INDEX.HTML
 
-Just html till now, no css and js seperate files
+Just html till now, no css and js separate files
 
 
 NEEDS ORGANIZING ALL FILES AND STRUCTURES. 

@@ -22,7 +22,7 @@ function icarusshow(event) {
     var newDiv = document.createElement("div");
     var icarus= document.createElement("img");
     newDiv.className= "icarus-div";
-    icarus.src="/assets/images/icarus.png";
+    icarus.src="assets/images/icarus.png";
     icarus.className= "icarus-img";
 
     newDiv.style.position = "fixed";
