@@ -4,11 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
+    <!-- favicon css -->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-brands/css/uicons-brands.css'>
+    
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
+        @import url('https://cdn-uicons.flaticon.com/2.3.0/uicons-brands/css/uicons-brands.css');
+
         body {
-            background: linear-gradient(to bottom , rgb(1, 3, 18)0%,rgb(19, 2, 19),rgb(35, 79, 113),rgb(96, 93, 5), rgb(145, 103, 6), rgb(85, 6, 22),black 100%);
+            background: linear-gradient(to  left , rgb(1, 3, 18)01%,rgb(19, 2, 19)7%,rgb(13, 31, 45),rgb(96, 93, 5), rgb(50, 36, 2), rgb(36, 2, 9),black );
         }
         .contact-form {
             background-color: rgba(255, 255, 255, 0.65); /* semi-transparent white */
@@ -23,6 +28,10 @@
             font-weight: light;
             text-align: center;
             color: rgb(18, 19, 2);
+        }
+
+        #social-icons{
+            text-decoration: none;
         }
 
 
@@ -57,7 +66,7 @@
                 <p style="text-align: center;">Under Work. Please be patient. 
                 Do not expect call anytime soon </p>
 
-                <form id="contact-form"  action="#" role="form" class="form ">
+                <form id="contact-form"  action="mailto:sarkararitra911@gmail.com?subject=Test&body=mailing works!! YAY!!!" method="post"" role="form" class="form ">
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" class="form-control" id="name" name="name" required>
@@ -72,6 +81,23 @@
                     </div>
                     <button type="submit" id="submit" class="form-control btn btn-primary text-capitalize">Submit</button>
                 </form>
+
+                <hr>
+
+                <div class="container-fluid  row justify-content-around " id="social-icons">
+                    
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fi fi-brands-facebook"></i></a>
+
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fi fi-brands-instagram"></i></a>
+
+                    <a href="https://www.spotify.com/" target="_blank"><i class="fi fi-brands-spotify"></i></a>
+
+                    <a href="https://www.youtube.com/" target="_blank"><i class="fi fi-brands-youtube"></i></a>
+
+                </div>
+
+                <hr>
+
             </div>
         </div>
     </div>
@@ -81,7 +107,7 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script>
+<!-- <script>
     document.getElementById('submit').addEventListener('click', function(event) {
         event.preventDefault();
     this.textContent = "Not Allowed";
@@ -96,6 +122,6 @@
 
 });
 
-</script>
+</script> -->
 </body>
 </html>
