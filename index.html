@@ -1,192 +1,71 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Web Page Template</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <style>
-        /* Basic styles */
-        
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(to bottom, #8caaeb, #580f0f);
-            color: white
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            /* color: rgb(148, 200, 2); */
-            text-shadow: 2px 2px 4px rgba(100, 255, 100, 0.5);
-            font-weight: bold;
-        }
-        
-        header {
-            position: relative;
-            /* height: 300px; */
-            /* Adjust as needed */
-            /* overflow: hidden; */
-        }
-        
-        .header-image {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url("images/img6.jpg"); /* Corrected background image URL */
-            background-size: cover;
-            opacity: 70%;
-        }
-
-        /* .carousel slide{         
-        } */
-        
-        .carousel {
-            height: 500px;
-            /* Adjust as needed */
-            overflow: hidden;
-        }
-        
-        .carousel img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        /* Responsive styles */
-        
-        @media (max-width: 768px) {
-            header {
-                height: 200px;
-            }
-            .carousel {
-                height: 300px;
-                /* Adjust as needed */
-            }
-        }
-        
-        @media (max-width: 576px) {
-            .container {
-                padding: 10px;
-            }
-        }
-        /* Opening text styles */
-        
-        #opening-text {
-            /* padding-top: 50px;  */
-            color: #00570d;
-        }
-        
-        #opening-text h1 {
-            z-index: "999";
-            font-size: 2.5em;
-            /* Increase font size */
-            margin-bottom: 20px;
-            /* Add some space at the bottom */
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            /* Add shadow for better visibility */
-            color: rgb(0, 0, 0);
-            font-weight: 400;
-            background-color: rgba(83, 76, 76, 0.404);
-            border-radius: 20px;
-            /* Add background color */
-            padding: 10px;
-            /* Add padding */
-            max-width: fit-content;
-        }
-        
-        #opening-text p {
-            font-size: 20px;
-            /* Increase font size */
-            margin-bottom: 30px;
-            /* Add some space at the bottom */
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#151612">
+  <meta name="description" content="Step into ICARUS Verse. Independent music, live moments, and unfiltered energy. Listen, explore the archive, and connect.">
+  <title>ICARUS — No ceiling. Just sound.</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/site.js" defer></script>
 </head>
-
 <body>
-
-    <header>
-        <!-- Header image -->
-        <div class="header-image">
-            <!-- <img src="images\img6.jpg" class="d-block w-100"> -->
-        </div>
-    </header>
-
-    <div class="container" id="opening-text">
-        <h1 class="bg-black text-bg-primary bg-black  font-weight-bold font ">Welcome to ICARUS Verse</h1>
-        <p>This is some introductory text about our website. Feel free to browse through the content below.</p>
-
-        <!-- <br><br><br><br><br><br><br><br> -->
-
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="images\img3.jpg" class="d-block w-100" alt="Image 1">
-                </div>
-                <div class="carousel-item">
-                    <img src="images\img4.jpg" class="d-block w-100" alt="Image 2">
-                </div>
-                <div class="carousel-item">
-                    <img src="images\img1.jpg" class="d-block w-100" alt="Image 3">
-                </div>
-                <!-- Add more carousel items as needed -->
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-
-        <h2>About Us</h2>
-        <p>This is some information about our organization.</p>
-
-
-        <div class="row justify-content-center">
-            <div class>
-                <a class="btn btn-primary m-2"  href="musixxx.html" target="_blank">music</a>
-            </div>
-
-            <div >
-                <a class="btn btn-danger  m-2"  href="player.html" target="_blank">Player</a>
-
-                <a class="btn btn-info m-2"  href="contact.html">Contact</a>
-
-            </div>
-        </div>
-        
-
-        <footer>
-            <p><a href="versions.html">All pages, alternate designs &amp; experiments</a></p>
-            <h2>
-                <a href="contact.html"btn btn-primary mt-5 ></a>
-            </h2>
-            <p>You can reach us at:</p>
-            <ul>
-                <li>Email: example@example.com</li>
-                <li>Phone: 123-456-7890</li>
-            </ul>
-        </footer>
-       
-    </div>
-
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="ICARUS home"><span class="brand-symbol" aria-hidden="true">↗</span> ICARUS<span class="brand-dot" aria-hidden="true">✳</span></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="navigation">Menu <span aria-hidden="true">+</span></button>
+    <nav id="navigation" aria-label="Main navigation">
+      <a href="#music"><span>01</span> Music</a><a href="#about"><span>02</span> The artist</a><a href="#moments"><span>03</span> Live moments</a>
+      <a class="nav-contact" href="#contact">Let’s talk <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-image"><img src="assets/photos/img3.jpg" alt="Live performance: a vocalist on the mic, surrounded by the room’s energy" fetchpriority="high" width="1600" height="1015"></div>
+      <div class="hero-content">
+        <p class="eyebrow"><span class="signal" aria-hidden="true"></span> Independent sound. Unfiltered energy.</p>
+        <h1 id="hero-title">NO CEILING.<br>JUST <span>SOUND.</span></h1>
+        <div class="hero-bottom"><p>Welcome to ICARUS Verse.<br>Turn it up. Stay a while.</p><a class="round-link" href="#music" aria-label="Explore the music"><span aria-hidden="true">↘</span></a></div>
+      </div>
+      <div class="hero-caption"><span>ICARUS / IN THE ELEMENT</span><span>SCROLL TO EXPLORE ↓</span></div>
+    </section>
+    <div class="statement" aria-hidden="true"><span>FROM THE ROOM</span><span>✳</span><span>TO YOUR HEADPHONES</span><span>✳</span><span>NO FILTER NEEDED</span><span>↗</span></div>
+    <section class="music-section section-pad" id="music" aria-labelledby="music-title">
+      <div class="section-top"><p class="eyebrow">01 / THE SOUND</p><a class="text-link" href="https://soundcloud.com/aritra-sarkar-180252798" target="_blank" rel="noopener noreferrer">SoundCloud <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a></div>
+      <div class="section-heading"><h2 id="music-title">IN ROTATION<span class="accent-period">.</span></h2><p>A little attitude.<br>A lot of volume.</p></div>
+      <div class="music-tabs" role="group" aria-label="Music collection"><button class="collection active" data-collection="originals" aria-pressed="true">The ICARUS archive <span>03</span></button><button class="collection" data-collection="influences" aria-pressed="false">On repeat <span>03</span></button></div>
+      <div class="track-grid" id="track-grid" aria-live="polite"></div>
+      <p class="collection-note" id="collection-note">One named track, two untitled cuts from the original player. Explore the archive on SoundCloud.</p>
+      <noscript><p>Listen directly on <a href="https://soundcloud.com/aritra-sarkar-180252798">ICARUS’s SoundCloud profile</a>. Enable JavaScript for the music selector and photo viewer.</p></noscript>
+    </section>
+    <section class="about-section section-pad" id="about" aria-labelledby="about-title">
+      <div class="about-heading"><p class="eyebrow">02 / THE ARTIST</p><span class="asterisk" aria-hidden="true">✳</span></div>
+      <div class="about-copy"><h2 id="about-title">THE VERSE.<br>THE ROOM.<br><span>THE MOMENT.</span></h2><div class="about-detail"><span class="small-rule"></span><p>Music lives somewhere between a voice and the people listening. This is a space for both.</p><p>Step into the ICARUS archive: tracks, experiments, and moments from the floor. Raw around the edges. Exactly where it should be.</p><a class="text-link" href="#moments">See the moments <span aria-hidden="true">↘</span></a></div></div>
+    </section>
+    <section class="moments-section section-pad" id="moments" aria-labelledby="moments-title">
+      <div class="section-top"><p class="eyebrow">03 / FROM THE FLOOR</p><span class="eyebrow">NO STUDIO. NO SCRIPT.</span></div>
+      <div class="section-heading"><h2 id="moments-title">YOU HAD TO<br>BE THERE<span class="accent-period">.</span></h2><p>Up close. In the crowd.<br>A few frames from the archive.</p></div>
+      <div class="gallery-stage">
+        <button class="gallery-image" id="open-photo" aria-label="Enlarge performance photo 1 of 7"><img id="gallery-photo" src="assets/photos/img4.jpg" alt="A vocalist reaches toward the crowd during a live performance" loading="lazy"><span class="photo-expand" aria-hidden="true">↗</span></button>
+        <div class="gallery-side"><p class="gallery-pullquote">ALL YOU<br>NEED IS<br><em>THE ROOM.</em></p><div class="gallery-controls"><p class="eyebrow"><span id="photo-number">01</span> <span class="muted">/ 07</span></p><div><button class="icon-button" id="previous-photo" aria-label="Previous photo">←</button><button class="icon-button" id="next-photo" aria-label="Next photo">→</button></div></div><p class="gallery-caption" id="gallery-caption" aria-live="polite">On the mic. In the moment.</p></div>
+      </div>
+      <div class="photo-thumbnails" aria-label="Choose a photograph" id="photo-thumbnails"></div>
+    </section>
+    <section class="contact-section section-pad" id="contact" aria-labelledby="contact-title">
+      <p class="eyebrow">04 / KEEP THE CONVERSATION GOING</p>
+      <a class="contact-title" href="https://soundcloud.com/aritra-sarkar-180252798" target="_blank" rel="noopener noreferrer"><h2 id="contact-title">MAKE<br>SOME NOISE.</h2><span aria-hidden="true">↗</span><span class="sr-only">Visit ICARUS on SoundCloud (opens in a new tab)</span></a>
+      <div class="contact-bottom"><p>Music, ideas, or just a good conversation.<br>Find ICARUS on SoundCloud.</p><div><a class="text-link" href="https://soundcloud.com/aritra-sarkar-180252798" target="_blank" rel="noopener noreferrer">Open SoundCloud ↗</a><button class="copy-link" id="copy-profile">Copy profile link <span aria-hidden="true">+</span></button><span class="copy-status sr-only" role="status"></span></div></div>
+    </section>
+  </main>
+  <footer class="site-footer"><a class="brand" href="#home">ICARUS<span class="brand-dot" aria-hidden="true">✳</span></a><span class="eyebrow">NO CEILING. JUST SOUND.</span><div><a href="versions.html">The archive ↗</a><a href="#home">Back to top ↑</a></div></footer>
+  <aside class="player-panel" id="player-panel" aria-label="Music player" hidden>
+    <div class="player-heading"><div><p class="eyebrow">ON THE DECK</p><h2 id="player-title">Select a track</h2></div><button class="icon-button" id="close-player" aria-label="Close player and stop playback">×</button></div>
+    <p class="player-status" id="player-status" role="status">Choose a track to listen.</p>
+    <div id="widget-container"></div>
+    <div class="player-controls"><button id="toggle-play" class="control-button" disabled>Play</button><button id="toggle-mute" class="control-button" aria-pressed="false" disabled>Mute</button><label for="volume">Volume</label><input id="volume" type="range" min="0" max="100" value="60" disabled></div>
+    <a class="player-fallback text-link" id="player-fallback" href="https://soundcloud.com/aritra-sarkar-180252798" target="_blank" rel="noopener noreferrer">Listen on SoundCloud ↗</a>
+  </aside>
+  <dialog class="lightbox" id="lightbox" aria-label="Performance photograph viewer"><div class="lightbox-toolbar"><p id="lightbox-count" class="eyebrow">01 / 07</p><button class="icon-button" id="close-lightbox" aria-label="Close photograph viewer">×</button></div><img id="lightbox-image" alt=""><div class="lightbox-bottom"><button class="icon-button" id="lightbox-previous" aria-label="Previous photograph">←</button><p id="lightbox-caption"></p><button class="icon-button" id="lightbox-next" aria-label="Next photograph">→</button></div></dialog>
 </body>
-
 </html>
