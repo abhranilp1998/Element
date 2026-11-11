@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Element — All pages and versions</title>
+  <style>
+    :root { color-scheme: dark; font-family: system-ui, sans-serif; background: #11151b; color: #edf2f7; }
+    body { max-width: 960px; margin: auto; padding: 32px 20px 60px; line-height: 1.6; }
+    h1 { line-height: 1.15; } h2 { margin-top: 36px; }
+    a { color: #a9dbff; } a:focus-visible { outline: 3px solid #ffd36b; outline-offset: 5px; }
+    .pages { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 16px; }
+    .page { background: #202833; border: 1px solid #3d4b5e; border-radius: 12px; padding: 20px; }
+    .page a { font-size: 1.15rem; font-weight: 650; } .page p { margin-bottom: 0; color: #c5cfda; }
+    .note { color: #c5cfda; max-width: 75ch; }
+  </style>
+</head>
+<body>
+  <p><a href="index.html">← Open the main site</a></p>
+  <h1>All pages and versions</h1>
+  <p class="note">Explore the main site, alternate designs, and original experiments. Alternate pages retain their original source and navigation; their internal links open the main pages.</p>
+  <h2>Main site</h2>
+  <div class="pages">
+    <article class="page"><a href="index.html">Home</a><p>Performance photographs, carousel, introduction, and site links.</p></article>
+    <article class="page"><a href="musixxx.html">Music gallery</a><p>SoundCloud cards with hover effects and shared volume controls.</p></article>
+    <article class="page"><a href="player.html">Player</a><p>Three-track list with SoundCloud widgets and volume controls.</p></article>
+    <article class="page"><a href="contact.html">Contact</a><p>Original contact form demo. Submission is disabled.</p></article>
+  </div>
+  <h2>Alternate designs</h2>
+  <div class="pages">
+    <article class="page"><a href="index-popss.html">Alternate home · popss</a><p>Introduction inside the image header, with a separate carousel and About section.</p></article>
+    <article class="page"><a href="musixxx-popss.html">Alternate music · popss</a><p>ICARUS track card without the extra standalone duplicate widget.</p></article>
+    <article class="page"><a href="test-responsive.html">Responsive music experiment</a><p>Bootstrap columns and margins adjusted for smaller screens.</p></article>
+  </div>
+  <h2>Original pages</h2>
+  <div class="pages">
+    <article class="page"><a href="index-original.html">Original home</a><p>Homepage from the copied repository's main branch.</p></article>
+    <article class="page"><a href="musixxx-original.html">Original music gallery</a><p>Earlier gallery with the repeated instrumental card.</p></article>
+    <article class="page"><a href="contact-original.html">Original contact demo</a><p>Earlier disabled-submission form, before the cursor change.</p></article>
+  </div>
+  <h2>Other experiments</h2>
+  <div class="pages">
+    <article class="page"><a href="bigbrain.html">Music carousel</a><p>SoundCloud players presented as carousel slides.</p></article>
+    <article class="page"><a href="newpage.html">Two-player layout</a><p>Earlier embedded-player layout with hover enlargement.</p></article>
+    <article class="page"><a href="test.html">Later music experiment</a><p>Scaled cards, ICARUS embeds, and volume controls.</p></article>
+    <article class="page"><a href="trailnErr.html">Homepage prototype</a><p>Original generic homepage and photo-carousel experiment.</p></article>
+  </div>
+  <p class="note">These are preserved prototypes. Existing player, contact, layout, and placeholder-content limitations remain. SoundCloud playback and Bootstrap styling depend on external services.</p>
+</body>
+</html>

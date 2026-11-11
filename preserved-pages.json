@@ -1,0 +1,47 @@
+{
+  "description": "Exact source copies of alternate branch pages. Shared images and relative links resolve in the project root.",
+  "pages": [
+    {
+      "file": "index-popss.html",
+      "source": "index.html",
+      "branch": "archive/element-master-popss",
+      "commit": "7563238f861b60c213f54b4c973a7a3625bda224",
+      "blob": "d4adfbde0f8f366900a0ab7584dc4065d5ab7965"
+    },
+    {
+      "file": "musixxx-popss.html",
+      "source": "musixxx.html",
+      "branch": "archive/element-master-popss",
+      "commit": "7563238f861b60c213f54b4c973a7a3625bda224",
+      "blob": "e28185f667e4336bb16b64798663a27195b62fdb"
+    },
+    {
+      "file": "index-original.html",
+      "source": "index.html",
+      "branch": "archive/element-master-main",
+      "commit": "27ff5e2a453757740adb5a89f852d62b29b4b223",
+      "blob": "d2dd5830235a690f85935f527debf82db2a21d31"
+    },
+    {
+      "file": "musixxx-original.html",
+      "source": "musixxx.html",
+      "branch": "archive/element-master-main",
+      "commit": "27ff5e2a453757740adb5a89f852d62b29b4b223",
+      "blob": "db2fb0ae68b803cb4b264ac683b90164acf1783a"
+    },
+    {
+      "file": "contact-original.html",
+      "source": "contact.html",
+      "branch": "archive/element-master-main",
+      "commit": "27ff5e2a453757740adb5a89f852d62b29b4b223",
+      "blob": "e273c7a2893225f1a7926021a14ce04832b6bf8c"
+    },
+    {
+      "file": "test-responsive.html",
+      "source": "test.html",
+      "branch": "archive/element-master-main",
+      "commit": "27ff5e2a453757740adb5a89f852d62b29b4b223",
+      "blob": "4ff6d0a95e57f6320ca5a9d8662a3f56a5e0886d"
+    }
+  ]
+}
