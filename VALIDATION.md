@@ -2,6 +2,19 @@
 
 Checked in the in-app browser on 2026-11-11.
 
+## Artist sources and native platform hub
+
+- Public live site, Instagram bio/post images and expanded Linktree service
+  drawers inspected. Source provenance is recorded in ARTIST_SOURCES.md.
+- links.html contains 37 direct destination actions and no Linktree redirect.
+  Both release disclosures expand inside the website.
+- Homepage catalog contains six ICARUS/archive cards; the listening room retains
+  the previous six entries and adds three source-backed SoundCloud embeds.
+- New local images loaded without errors. Home has no page overflow at 360,
+  768, and 1440px. Illustration aspect ratio is explicitly preserved.
+- External destination URLs were recovered from the source pages; playback or
+  regional availability across every third-party service is not guaranteed.
+
 ## Listening room and transitions
 
 - Home links to `music.html` through the navigation, hero, featured track, and

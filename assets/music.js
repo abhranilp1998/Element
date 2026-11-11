@@ -11,7 +11,7 @@
     influences.hidden = filter === 'originals';
     archive.hidden = filter === 'influences';
     if (filter === 'originals') archive.open = true;
-    document.querySelector('#filter-count').textContent = filter === 'all' ? '06 tracks / 02 collections' : '03 tracks / 01 collection';
+    document.querySelector('#filter-count').textContent = filter === 'all' ? '09 tracks / 02 collections' : filter === 'originals' ? '06 tracks / 01 collection' : '03 tracks / 01 collection';
     document.dispatchEvent(new Event('musicfilterchange'));
   }));
   document.querySelector('.room-filters').hidden = false;

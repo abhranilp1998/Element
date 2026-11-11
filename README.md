@@ -5,6 +5,16 @@ A local artist website in plain HTML, CSS, and JavaScript. The redesign lives on
 
 ## Redesigned experience
 
+### Artist content and native links hub
+
+`links.html` hosts the artist's profile buttons, release-specific streaming
+choices, and video links directly on the site. `assets/artist-links.json` records
+the recovered destinations; `ARTIST_SOURCES.md` documents the source pages,
+artist identity, three added SoundCloud tracks, Instagram images, and supplied
+ICARUS illustration. The listening room now contains nine SoundCloud entries,
+and the homepage includes the artist biography, alter-ego artwork, and original
+Instagram post links. No new release or deployment is implied by these changes.
+
 ### Contact and maintainer credit
 
 `contact.html` provides Book a show, Collaborate, and Say hello routes, with
