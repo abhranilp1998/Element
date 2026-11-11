@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+<script>document.documentElement.classList.add('motion-ready','is-entering');setTimeout(()=>document.documentElement.classList.remove('is-entering'),1800);</script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#151612">
@@ -8,15 +9,20 @@
   <title>ICARUS — No ceiling. Just sound.</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/room.css">
+  <script src="assets/tracks.js" defer></script>
+  <script src="assets/navigation.js" defer></script>
   <script src="assets/site.js" defer></script>
+  <script src="assets/players.js" defer></script>
 </head>
 <body>
+  <div class="page-transition" aria-hidden="true"><span class="transition-panel"></span><span class="transition-panel"></span><span class="transition-panel"></span><span class="transition-word">ICARUS <i>✳</i></span></div>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <a class="brand" href="#home" aria-label="ICARUS home"><span class="brand-symbol" aria-hidden="true">↗</span> ICARUS<span class="brand-dot" aria-hidden="true">✳</span></a>
     <button class="menu-toggle" aria-expanded="false" aria-controls="navigation">Menu <span aria-hidden="true">+</span></button>
     <nav id="navigation" aria-label="Main navigation">
-      <a href="#music"><span>01</span> Music</a><a href="#about"><span>02</span> The artist</a><a href="#moments"><span>03</span> Live moments</a>
+      <a href="music.html"><span>01</span> Music <span aria-hidden="true">↗</span></a><a href="#about"><span>02</span> The artist</a><a href="#moments"><span>03</span> Live moments</a>
       <a class="nav-contact" href="#contact">Let’s talk <span aria-hidden="true">↗</span></a>
     </nav>
   </header>
@@ -26,17 +32,22 @@
       <div class="hero-content">
         <p class="eyebrow"><span class="signal" aria-hidden="true"></span> Independent sound. Unfiltered energy.</p>
         <h1 id="hero-title">NO CEILING.<br>JUST <span>SOUND.</span></h1>
-        <div class="hero-bottom"><p>Welcome to ICARUS Verse.<br>Turn it up. Stay a while.</p><a class="round-link" href="#music" aria-label="Explore the music"><span aria-hidden="true">↘</span></a></div>
+        <div class="hero-bottom"><p>Welcome to ICARUS Verse.<br>Turn it up. Stay a while.</p><a class="round-link" href="music.html" aria-label="Explore the music"><span aria-hidden="true">↘</span></a></div>
       </div>
+      <a class="hero-listen" href="music.html"><span class="mini-disc" aria-hidden="true"></span><span><small>STEP INTO THE LISTENING ROOM</small><strong>Six tracks. One place.</strong></span><span aria-hidden="true">↗</span></a>
       <div class="hero-caption"><span>ICARUS / IN THE ELEMENT</span><span>SCROLL TO EXPLORE ↓</span></div>
     </section>
     <div class="statement" aria-hidden="true"><span>FROM THE ROOM</span><span>✳</span><span>TO YOUR HEADPHONES</span><span>✳</span><span>NO FILTER NEEDED</span><span>↗</span></div>
     <section class="music-section section-pad" id="music" aria-labelledby="music-title">
       <div class="section-top"><p class="eyebrow">01 / THE SOUND</p><a class="text-link" href="https://soundcloud.com/aritra-sarkar-180252798" target="_blank" rel="noopener noreferrer">SoundCloud <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a></div>
       <div class="section-heading"><h2 id="music-title">IN ROTATION<span class="accent-period">.</span></h2><p>A little attitude.<br>A lot of volume.</p></div>
+      <div class="home-feature soundcloud-entry" data-reveal>
+        <div class="home-feature-copy"><p class="eyebrow">FEATURED / ICARUS</p><h3>KISS MY ASS.</h3><p>The featured cut. Right here, ready to play.</p><a class="text-link" href="music.html">Enter the listening room ↗</a></div>
+        <div class="embed-shell"><iframe data-soundcloud="1804249125" title="Kiss My Ass by ICARUS — SoundCloud player" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F1804249125&amp;color=%23667d1a&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;visual=false" height="166" allow="autoplay" loading="lazy"></iframe><p class="embed-status" role="status">Press play to listen. <a href="https://soundcloud.com/aritra-sarkar-180252798/kiss-my-ass" target="_blank" rel="noopener noreferrer">Or open on SoundCloud ↗</a></p></div>
+      </div>
       <div class="music-tabs" role="group" aria-label="Music collection"><button class="collection active" data-collection="originals" aria-pressed="true">The ICARUS archive <span>03</span></button><button class="collection" data-collection="influences" aria-pressed="false">On repeat <span>03</span></button></div>
       <div class="track-grid" id="track-grid" aria-live="polite"></div>
-      <p class="collection-note" id="collection-note">One named track, two untitled cuts from the original player. Explore the archive on SoundCloud.</p>
+      <p class="collection-note" id="collection-note">Open any cover to find its embedded player in the listening room.</p>
       <noscript><p>Listen directly on <a href="https://soundcloud.com/aritra-sarkar-180252798">ICARUS’s SoundCloud profile</a>. Enable JavaScript for the music selector and photo viewer.</p></noscript>
     </section>
     <section class="about-section section-pad" id="about" aria-labelledby="about-title">
@@ -59,13 +70,6 @@
     </section>
   </main>
   <footer class="site-footer"><a class="brand" href="#home">ICARUS<span class="brand-dot" aria-hidden="true">✳</span></a><span class="eyebrow">NO CEILING. JUST SOUND.</span><div><a href="versions.html">The archive ↗</a><a href="#home">Back to top ↑</a></div></footer>
-  <aside class="player-panel" id="player-panel" aria-label="Music player" hidden>
-    <div class="player-heading"><div><p class="eyebrow">ON THE DECK</p><h2 id="player-title">Select a track</h2></div><button class="icon-button" id="close-player" aria-label="Close player and stop playback">×</button></div>
-    <p class="player-status" id="player-status" role="status">Choose a track to listen.</p>
-    <div id="widget-container"></div>
-    <div class="player-controls"><button id="toggle-play" class="control-button" disabled>Play</button><button id="toggle-mute" class="control-button" aria-pressed="false" disabled>Mute</button><label for="volume">Volume</label><input id="volume" type="range" min="0" max="100" value="60" disabled></div>
-    <a class="player-fallback text-link" id="player-fallback" href="https://soundcloud.com/aritra-sarkar-180252798" target="_blank" rel="noopener noreferrer">Listen on SoundCloud ↗</a>
-  </aside>
   <dialog class="lightbox" id="lightbox" aria-label="Performance photograph viewer"><div class="lightbox-toolbar"><p id="lightbox-count" class="eyebrow">01 / 07</p><button class="icon-button" id="close-lightbox" aria-label="Close photograph viewer">×</button></div><img id="lightbox-image" alt=""><div class="lightbox-bottom"><button class="icon-button" id="lightbox-previous" aria-label="Previous photograph">←</button><p id="lightbox-caption"></p><button class="icon-button" id="lightbox-next" aria-label="Next photograph">→</button></div></dialog>
 </body>
 </html>

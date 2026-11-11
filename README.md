@@ -5,21 +5,41 @@ A local artist website in plain HTML, CSS, and JavaScript. The redesign lives on
 
 ## Redesigned experience
 
+### Listening room update
+
+`music.html` is the dedicated songs page with six native SoundCloud embeds. The
+featured player is visible in the opening screen, three listening selections are
+below, and two original untitled entries remain in an archive disclosure. Home
+has its own visible featured player; cover links lead directly to the corresponding
+song. There is no hidden popup player.
+
+- `assets/tracks.js`: the shared homepage catalog.
+- `assets/players.js`: coordinates the native widgets, pauses other tracks when
+  one plays, and provides shared volume/mute and Pause all controls in the room.
+- `assets/navigation.js`: shared navigation plus staggered entrance/exit curtains
+  and title/image entrances. Modified clicks, external links, and anchor links
+  retain normal browser behavior; reduced motion skips the animation and delay.
+- `assets/room.css`: listening-room layout and transition styles.
+- `assets/music.js`: collection filters and deep links into archived tracks.
+
+Pages render their native embeds in HTML; JavaScript adds coordination, shared
+controls, filtering, and transitions. If the SoundCloud API fails, native controls
+and external links remain available. The two untitled archive tracks may be
+unavailable upstream. Music stops when navigating between full HTML documents.
+
 - `index.html`: a single, responsive journey through music, artist, live photos,
   and the existing SoundCloud contact route.
 - `assets/site.css`: shared visual language, mobile navigation, reduced-motion
   support, and keyboard focus styles. No Bootstrap, framework, or web fonts.
-- `assets/site.js`: six unique tracks from the original versions, two music
-  collections, one lazy-loaded SoundCloud widget, volume/mute restoration,
-  unavailable-track fallbacks, photo carousel, and native-dialog lightbox.
+- `assets/site.js`: homepage collections, photo carousel, native-dialog lightbox,
+  and the profile copy action.
 - `assets/photos/`: optimized photographs and small thumbnails; original files
   in `images/` remain unchanged. All optimized photos total about 2 MB.
 - `index-legacy.html`: exact pre-redesign homepage, alongside every previously
   preserved page listed in `versions.html`.
 
-The main page works without third-party CSS or JavaScript. SoundCloud loads only
-after a visitor selects a track. Play requires an explicit click. Closing the
-player removes the iframe and stops audio. Untitled tracks retain their original
+The main page works without third-party CSS or JavaScript. SoundCloud players
+are visible and load lazily. Play requires an explicit click. Untitled tracks retain their original
 IDs without invented names or release information. The gallery supports arrow
 keys inside the lightbox and Escape to close; the mobile menu also closes with
 Escape. The contact section links to the supplied profile; there is no pretend

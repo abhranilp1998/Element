@@ -2,6 +2,28 @@
 
 Checked in the in-app browser on 2026-11-11.
 
+## Listening room and transitions
+
+- Home links to `music.html` through the navigation, hero, featured track, and
+  individual covers. The featured SoundCloud player is visible directly on Home.
+- The songs page contains six native embeds. The featured ICARUS widget appears
+  in the opening desktop and mobile screens. Four available tracks loaded; both
+  untitled archive entries show unavailable-track messages and external links.
+- Played the featured track, then Raindrops. The featured widget paused, only
+  Raindrops remained marked playing, and the shared title stayed correct.
+- Pause all stopped playback. Mute set the shared volume to zero; Unmute restored
+  60. The ICARUS filter hid the listening selections and opened the archive.
+- The staggered curtain was observed on entrance and Home-to-Music exit. The
+  reverse route works through the mobile menu. Reduced-motion CSS and the
+  JavaScript bypass keep animations and navigation delays off when requested.
+- Mobile player layout inspected at 390px. The native SoundCloud controls remain
+  visible. Archive pages and original photographs remain preserved.
+
+## Earlier single-page iteration
+
+These checks describe the first redesign, before the visible-embed listening
+room replaced its floating single-player interface.
+
 - Desktop and 390px mobile layouts visually inspected. No page overflow at
   viewport widths 360, 768, and 1440px.
 - Both music collections switch correctly. The initial page creates no iframe.
