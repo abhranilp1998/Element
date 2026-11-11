@@ -5,6 +5,17 @@ A local artist website in plain HTML, CSS, and JavaScript. The redesign lives on
 
 ## Redesigned experience
 
+### Contact and maintainer credit
+
+`contact.html` provides Book a show, Collaborate, and Say hello routes, with
+relevant fields, browser validation, copy-message, direct email, and prefilled
+email drafts. All routes currently use `abhranilpaul00@gmail.com`, configured in
+`assets/contact-config.js`. This address belongs to Abhranil Paul, the website
+developer and maintainer. The draft opens in the visitor's email app; the site
+does not send or store submissions. `contact-legacy.html` preserves the previous
+contact page. Modern-page footers credit Abhranil Paul for website design and
+development, with music/photo ownership kept separate.
+
 ### Listening room update
 
 `music.html` is the dedicated songs page with six native SoundCloud embeds. The

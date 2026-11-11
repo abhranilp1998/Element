@@ -88,15 +88,3 @@ lightbox.addEventListener('keydown', event => {
   if (event.key === 'ArrowRight') { event.preventDefault(); showPhoto(photoIndex + 1); }
 });
 showPhoto(0);
-
-$('#copy-profile').addEventListener('click', async () => {
-  const button = $('#copy-profile');
-  try {
-    await navigator.clipboard.writeText(profile);
-    button.textContent = 'Link copied ✓';
-    $('.copy-status').textContent = 'SoundCloud profile link copied to clipboard.';
-  } catch {
-    button.textContent = 'Use Open SoundCloud ↗';
-    $('.copy-status').textContent = 'Clipboard unavailable. Use the Open SoundCloud link beside this button.';
-  }
-});
