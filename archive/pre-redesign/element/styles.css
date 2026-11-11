@@ -1,0 +1,348 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color: rgb(214, 145, 145) ; */
+    z-index: -999;
+}
+
+/* Set a modern background color */
+
+#about {
+    margin: 30px 5px 0 5px;
+    padding: 10px;
+    position: absolute;
+    left:50px;
+}
+
+body {
+    margin: 10px;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(135deg ,hsl(211, 91%, 22%) 20%, #181102 , hsl(218, 67%, 2%) );
+    background-size: 2000% 2000%; /* Increase the background size to allow smooth transition */
+    /* animation: gradientAnimation 3s infinite; Adjust animation duration as per your preference    z-index: -99; */
+}
+
+/* Set a modern background color */
+h1 {
+    font-size: 22px;
+    color: #3e41ff;
+    margin-bottom: 16px;
+}
+
+button{
+    background-color: #3e41ff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 16px;
+}
+
+#about h2{
+    font-size: 20px;
+    color: hsl(18, 100%, 55%);
+    margin-bottom: 16px;
+}
+
+#about p{
+    font-size: 18px;
+    color: hsl(313, 14%, 69%);
+    margin-bottom: 16px;
+    background-color: #3e41ff1d;
+    transform: blur(2px);
+    border-radius: 15%;
+    padding: 10px;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Apply modern card styles */
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow:  2px 4px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    margin-bottom: 16px;
+    margin-left: auto; /* Add this line to center the card horizontally */
+    margin-right: auto; /* Add this line to center the card horizontally */
+}
+
+/* Add styles for specific elements in home.html */
+/* Example: */
+
+.header-image{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100vw;
+    max-height: 550px;
+    top: -250px;
+    left: 0;
+    z-index: -999;
+    object-fit: cover;
+}
+
+/* object-fit: cover;
+} */
+
+#showcase{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+}
+    
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #333333;
+    margin-bottom: 0px;
+}
+
+#main-heading{
+    font-size: 44px;
+    color: #333333;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.carousel {
+    height: auto;
+    max-width: 70%;
+    /* Adjust as needed */
+    overflow: hidden;
+}
+
+.carousel img {
+    width: 600px;
+    height: fit-content;
+    object-fit: cover;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    /* header {
+        height: 200px;
+    } */
+    .carousel {
+        height: fit-content;
+        /* Adjust as needed */
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 10px;
+    }
+}
+
+/* Add more styles as needed */
+/* Add styles for the navigation bar */
+.navbar {
+    display:flex;
+    background-color: rgba(0, 0, 0, 0);
+    margin: 6px;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+/* Add styles for the navigation bar buttons */
+.navbar a {
+    color: hsla(0, 98%, 40%, 0.655);
+    text-decoration: none;
+    /* margin-right: 16px; */
+}
+
+/* Add styles for the unordered list */
+ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Add spacing between list items */
+ul li {
+    margin-right: 16px;
+}
+/* Add more styles as needed */
+h1 {
+    font-size: 22px;
+    color: #3e41ff;
+    margin-bottom: 16px;
+}
+
+button{
+    background-color: #3e41ff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 16px;
+}
+
+
+
+#about h2{
+    font-size: 20px;
+    color: hsl(18, 100%, 55%);
+    margin-bottom: 16px;
+    
+    ;
+}
+
+    #about p{
+        font-size: 18px;
+    color: hsl(313, 14%, 69%);
+    margin-bottom: 16px;
+    background-color: #3e41ff50;
+    transform: blur(2px);
+    }
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Apply modern card styles */
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    margin-bottom: 16px;
+    margin-left: auto; /* Add this line to center the card horizontally */
+    margin-right: auto; /* Add this line to center the card horizontally */
+}
+
+/* Add styles for specific elements in home.html */
+/* Example: */
+
+.header-image{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100vw;
+    max-height: 550px;
+    top: -250px;
+    left: 0;
+    z-index: -999;
+    object-fit: cover;
+}
+
+#showcase{
+    display: flex;
+    /* margin: 025%, auto; */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #333333;
+    margin-bottom: 0px;
+}
+#main-heading{
+    font-size: 44px;
+    color: #333333;
+    margin-bottom: 16px;
+    text-align: center;
+
+}
+
+.carousel {
+    height: auto;
+    max-width: 70%;
+    /* Adjust as needed */
+    overflow: hidden;
+}
+
+.carousel img {
+    width: 600px;
+    height: fit-content;
+    object-fit: cover;
+}
+/* Responsive styles */
+
+@media (max-width: 768px) {
+    /* header {
+        height: 200px;
+    } */
+    .carousel {
+        height: fit-content;
+        /* Adjust as needed */
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 10px;
+    }
+}
+
+
+/* Add more styles as needed */
+/* Add styles for the navigation bar */
+.navbar {
+    display:flex;
+    background-color: rgba(0, 0, 0, 0);
+    margin: 6px;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+/* Add styles for the navigation bar buttons */
+.navbar a {
+    color: hsla(0, 98%, 40%, 0.655);
+    text-decoration: none;
+    /* margin-right: 16px; */
+}
+
+/* Add styles for the unordered list */
+ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Add spacing between list items */
+ul li {
+    margin-right: 16px;
+}
+/* Add more styles as needed */

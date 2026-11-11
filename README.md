@@ -1,5 +1,11 @@
 # ICARUS / Element
 
+[Live website](https://abhranilp1998.github.io/Element/) ·
+[Where we started](https://abhranilp1998.github.io/Element/archive.html) ·
+[Previous live site](https://abhranilp1998.github.io/Element/archive/pre-redesign/index.html)
+
+Published as Alpha `v0.1.0-alpha.2`. See `DEPLOYMENT.md` for Pages and archive details.
+
 A local artist website in plain HTML, CSS, and JavaScript. The redesign lives on
 `codex/icarus-redesign`; `master` retains the consolidated original website.
 

@@ -1,13 +1,28 @@
-# ICARUS / Element — Alpha 0.1.0-alpha.1
+# ICARUS / Element — Alpha 0.1.0-alpha.2
 
-First alpha of the redesigned artist website, built with plain HTML, CSS, and
-JavaScript. The original versions and both repositories' histories are preserved.
+Second alpha of the redesigned artist website, now deployed to GitHub Pages.
+Built with plain HTML, CSS, and JavaScript. Original versions and histories are preserved.
+
+- [Live website](https://abhranilp1998.github.io/Element/)
+- [Where we started — archive](https://abhranilp1998.github.io/Element/archive.html)
+- [Previous live website](https://abhranilp1998.github.io/Element/archive/pre-redesign/index.html)
+- [All experiments and versions](https://abhranilp1998.github.io/Element/versions.html)
+
+## New in this alpha
+
+- Native All Links page with 37 direct music/video/social actions, including
+  release-specific Spotify, YouTube Music, Apple Music and other service choices.
+- Source-backed artist identity and biography, supplied ICARUS illustration,
+  and original Instagram images with source links.
+- Three additional artist tracks: Katana Freestyle, Sesh Theke Suru, and Chick Chai.
+- A dedicated Where we started page, prominent footer links, and a preserved
+  snapshot of the former GitHub Pages site from main at 6794535.
 
 ## Included
 
 - Responsive artist homepage with performance photography and a visible featured
   SoundCloud player.
-- Dedicated listening room with six native embeds, collection filters, shared
+- Dedicated listening room with nine native embeds, collection filters, shared
   volume and mute, Pause all, and coordinated playback.
 - Photo carousel and keyboard-accessible lightbox; optimized web photographs
   retain the untouched originals.
